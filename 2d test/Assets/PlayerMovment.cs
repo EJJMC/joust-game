@@ -32,7 +32,7 @@ public class PlayerMovment : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, P_BigJumpForce);
 
-            P_Anim.SetBool("isGrounded", true);
+            P_Anim.SetBool("IsGrounded", false);
         }
 
         /*
@@ -45,6 +45,19 @@ public class PlayerMovment : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == "Ground")
+        {
+            P_Anim.SetBool("IsGrounded", true);
+            Debug.Log("Grounded");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            P_Anim.SetBool("IsGrounded", false);
+            Debug.Log("In Air");
+        }
     }
 }
