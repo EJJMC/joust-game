@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private SpriteRenderer P_Sprite;
 
     private float dirX = 0f;
     public float P_MoveSpeed;
@@ -20,6 +21,7 @@ public class PlayerMovment : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         P_Anim = GetComponent<Animator>();
+        P_Sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,15 @@ public class PlayerMovment : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, P_BigJumpForce);
 
             P_Anim.SetBool("IsGrounded", false);
+        }
+
+        if(rb.velocity.x > 0f)
+        {
+            P_Sprite.flipX = true;
+        }
+        if (rb.velocity.x < 0f)
+        {
+            P_Sprite.flipX = false;
         }
 
         /*
