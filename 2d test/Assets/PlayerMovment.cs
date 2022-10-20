@@ -12,11 +12,14 @@ public class PlayerMovment : MonoBehaviour
     public float P_BigJumpForce;
     public float P_SmallJump;
 
+    private Animator P_Anim; 
+
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
+        P_Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,12 +31,20 @@ public class PlayerMovment : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, P_BigJumpForce);
+
+            P_Anim.SetBool("isGrounded", true);
         }
+
         /*
         if (Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, P_SmallJump);
         }
         */
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }
