@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - Ground
+  - Hitbox
   layers:
   - Default
   - TransparentFX
