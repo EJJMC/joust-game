@@ -735,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 1
+  ChangeLevel: {fileID: 1123049864}
 --- !u!1 &445983598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2200128063697563436, guid: e45948d4783c1455ea3ed00e1c8c800a, type: 3}
