@@ -6,10 +6,14 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int maxHealth = 10;
+
+    private LevelChanger ChangeLevel;
+
+
     // Start is called before the first frame update
     void Start()
     {
-       health= maxHealth;
+        health= maxHealth;
     }
 
     // Update is called once per frame
