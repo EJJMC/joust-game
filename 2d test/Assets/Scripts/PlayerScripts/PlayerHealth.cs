@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour
 
     private LevelChanger ChangeLevel;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            ChangeLevel.PlayerDeath();
         }
 
     }
