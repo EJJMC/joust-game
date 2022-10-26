@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Hitbox
   - Enemy
+  - SFX
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Water
   - UI
   - PostProcessing
-  - 
-  - 
+  - SFX
+  - Music
   - 
   - 
   - 
