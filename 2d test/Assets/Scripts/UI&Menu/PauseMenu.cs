@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    public GameObject pauseMenu;
 
     [SerializeField] AudioSource MusicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource SFXSource1;
+    [SerializeField] AudioSource SFXSource2;
 
     [SerializeField] Slider MusicvolumeSlider;
-    [SerializeField] Slider SFXvolumeSlider;    
+    [SerializeField] Slider SFXvolumeSlider;
 
     public void Pause()
     {
@@ -45,8 +46,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     void Start()
-    {
-
+    {       
 
         if (PlayerPrefs.HasKey("musicVolume"))
         {
@@ -73,7 +73,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ChangeSFXVolume()
     {
-        SFXSource.volume = SFXvolumeSlider.value;
+        SFXSource1.volume = SFXvolumeSlider.value;
+        SFXSource2.volume = SFXvolumeSlider.value;
         Save();
     }
 
