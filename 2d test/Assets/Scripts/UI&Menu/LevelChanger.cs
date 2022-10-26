@@ -8,6 +8,6 @@ public class LevelChanger : MonoBehaviour
 
     public void PlayerDeath()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }

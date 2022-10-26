@@ -35,7 +35,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (scoreValue > 3)
         {
-            SceneManager.LoadScene("End Screen");
+            SceneManager.LoadScene("Start Screen");
             
             Debug.Log("endgame");
         }
