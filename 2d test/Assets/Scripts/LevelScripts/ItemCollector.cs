@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour
 {
     public TMP_Text score;
     public int scoreValue = 0;
+    [SerializeField] public AudioSource ItemPickUp;
 
     private void Update()
     {
@@ -20,6 +21,7 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectable"))
         {
             Destroy(collision.gameObject);
+            ItemPickUp.Play();
             scoreValue += 1;
             SetScore();
         }

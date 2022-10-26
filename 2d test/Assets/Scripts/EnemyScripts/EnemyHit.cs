@@ -7,6 +7,7 @@ public class EnemyHit : MonoBehaviour
 
     public GameObject egg;
     public GameObject enemy;
+    [SerializeField] public AudioSource deathsfx;
     
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class EnemyHit : MonoBehaviour
         {
             Destroy(enemy);
             egg.SetActive(true);
+            deathsfx.Play();
         }
     }
 }
