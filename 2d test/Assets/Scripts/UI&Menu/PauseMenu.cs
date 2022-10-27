@@ -6,8 +6,14 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
-    [SerializeField] Slider volumeSlider;
+    public GameObject pauseMenu;
+
+    [SerializeField] AudioSource MusicSource;
+    [SerializeField] AudioSource SFXSource1;
+    [SerializeField] AudioSource SFXSource2;
+
+    [SerializeField] Slider MusicvolumeSlider;
+    [SerializeField] Slider SFXvolumeSlider;
 
     public void Pause()
     {
@@ -40,10 +46,16 @@ public class PauseMenu : MonoBehaviour
     }
 
     void Start()
-    {
+    {       
+
         if (PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
+            Load();
+        }
+        else if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            PlayerPrefs.SetFloat("SFXVolume", 1);
             Load();
         }
 
@@ -53,19 +65,28 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void ChangeVolume()
+    public void ChangeMusicVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+        MusicSource.volume = MusicvolumeSlider.value;
+        Save();
+    }
+
+    public void ChangeSFXVolume()
+    {
+        SFXSource1.volume = SFXvolumeSlider.value;
+        SFXSource2.volume = SFXvolumeSlider.value;
         Save();
     }
 
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        MusicvolumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        SFXvolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
     }
 
     private void Save()
     {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        PlayerPrefs.SetFloat("musicVolume", MusicvolumeSlider.value);
+        PlayerPrefs.SetFloat("SFXVolume", SFXvolumeSlider.value);
     }
 }
