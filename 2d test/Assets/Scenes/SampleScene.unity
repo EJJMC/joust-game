@@ -3166,7 +3166,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8705883, g: 0.87843144, b: 0.65882355, a: 1}
+    m_NormalColor: {r: 0.81568635, g: 0.8196079, b: 0.7019608, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.91372555, g: 0.87843144, b: 0.41176474, a: 1}
     m_SelectedColor: {r: 0.9294118, g: 0.8941177, b: 0.41960788, a: 1}
@@ -3513,7 +3513,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9215687, g: 0.92549026, b: 0.78823537, a: 1}
+    m_NormalColor: {r: 0.9215687, g: 0.92549026, b: 0.92156863, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.9294118, g: 0.8941177, b: 0.41960788, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3684,8 +3684,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290636778
-  m_fontColor: {r: 0.9176471, g: 0.9215687, b: 0.7411765, a: 1}
+    rgba: 4289974736
+  m_fontColor: {r: 0.81568635, g: 0.8196079, b: 0.7019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4837,8 +4837,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290308069
-  m_fontColor: {r: 0.8980393, g: 0.9058824, b: 0.72156864, a: 1}
+    rgba: 4289974736
+  m_fontColor: {r: 0.81568635, g: 0.8196079, b: 0.7019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5405,8 +5405,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290373606
-  m_fontColor: {r: 0.90196085, g: 0.9058824, b: 0.7254902, a: 1}
+    rgba: 4291818740
+  m_fontColor: {r: 0.9568628, g: 0.9568628, b: 0.8117648, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6552,7 +6552,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.87843144, g: 0.882353, b: 0.6901961, a: 1}
+    m_NormalColor: {r: 0.81568635, g: 0.8196079, b: 0.7019608, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.9294118, g: 0.8941177, b: 0.41960788, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
