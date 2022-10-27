@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -27,10 +28,10 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        dirX = CrossPlatformInputManager.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * P_MoveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, P_BigJumpForce);
 
